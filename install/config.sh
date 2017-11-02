@@ -9,17 +9,20 @@
 #echo "Bundle 'tpope/vim-fugitive" >> /etc/vim/vimrc.local
 # 配置i3桌面
 cd
+pwd
 echo "exec i3" > .xinitrc
 # 下载一个默认的图片作为桌面图片
 wget https://github.com/mmCAtE/Arcee/blob/master/install/bg.jpg -O .bg.jpg
 # 如果.config目录不存在则创建.config以及.config/i3
-if [ ! -d .config ]
+if [ ! -d ".config" ]
 then
-	mkdir .config
-	mkdir .config/i3
-elif [ ! -d .config/i3 ]
+	mkdir ".config"
+	mkdir ".config/i3"
+elif [ ! -d ".config/i3" ]
 then
-	mkdir .config/i3
+	mkdir ".config/i3"
+else
+	echo "All dir exists"
 fi
 # 下载i3的配置文件
 wget https://raw.githubusercontent.com/mmCAtE/Arcee/master/install/i3/config -O .config/i3/config

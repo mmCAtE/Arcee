@@ -12,6 +12,7 @@ apt-get install i3lock -y
 # 安装X11环境
 apt-get install xserver-xorg -y
 apt-get install xinit -y
+apt-get install x11-xserver-utils -y
 # 安装字体，否则某些软件的汉字会显示问号
 #!/bin/bash
 apt-get install ttf-wqy-zenhei -y
@@ -34,6 +35,9 @@ apt-get install fcitx -y
 apt-get install fcitx-sunpinyin -y
 apt-get install fcitx-libpinyin -y
 apt-get install fcitx-googlepinyin -y
+# 安装pdf阅读器
+apt-get install zathura
+apt-get install evince
 
 # 配置vim插件
 vundle=/usr/share/vim/vundle

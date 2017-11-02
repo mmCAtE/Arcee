@@ -154,9 +154,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         #status_command i3status -config i3status.conf
-        status_command py3status
+        status_command i3status
 		#position top
 }
 
+exec --no-startup-id xrdb /etc/X11/app-defaults/XTerm-color
 exec --no-startup-id feh --bg-scale /home/mmcate/.bg.jpg
-exec fcitx
+exec --no-startup-id fcitx
