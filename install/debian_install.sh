@@ -43,5 +43,7 @@ then
 fi
 git clone https://github.com/gmarik/vundle.git $vundle
 echo -e "filetype off\n\tset rtp+=/usr/share/vim/vundle\ncall vundle#rc()\nlet g:mkdp_path_to_chrome = \"mifori\"\nBundle 'plasticboy/vim-markdown'\nBundle 'iamcco/markdown-preview.vim'\nBundle 'iamcco/mathjax-support-for-mkdp'\nBundle 'tpope/vim-fugitive'" > /etc/vim/vimrc.local
+# 下载xterm的配置文件。主要是修改了xterm的配色
+wget https://raw.githubusercontent.com/mmCAtE/Arcee/master/install/XTerm-color -O /etc/X11/app-defaults/XTerm-color
 
 echo "INTALL DONE"

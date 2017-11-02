@@ -11,7 +11,7 @@
 cd
 echo "exec i3" > .xinitrc
 # 下载一个默认的图片作为桌面图片
-#wget http://www.ooqiu.com/uploads/allimg/170207/100-1F20G54418.jpg -O .bg.jpg
+wget https://github.com/mmCAtE/Arcee/blob/master/install/bg.jpg -O .bg.jpg
 # 如果.config目录不存在则创建.config以及.config/i3
 if [ ! -d .config ]
 then
@@ -21,10 +21,11 @@ elif [ ! -d .config/i3 ]
 then
 	mkdir .config/i3
 fi
-
-
-echo "exec fcitx" >> ".config/i3/config"
-echo "exec --no-startup-id feh --bg-scale .bg.jpg" >> ".config/i3/config"
+# 下载i3的配置文件
+wget https://raw.githubusercontent.com/mmCAtE/Arcee/master/install/i3/config -O .config/i3/config
+wget https://raw.githubusercontent.com/mmCAtE/Arcee/master/install/i3/i3status.conf -O .config/i3/i3status.conf
+#echo "exec fcitx" >> ".config/i3/config"
+#echo "exec --no-startup-id feh --bg-scale .bg.jpg" >> ".config/i3/config"
 # 获取i3的版本字符串
 #ver=$(i3 -version)
 # 从i3的版本字符串中截取字符串数字
